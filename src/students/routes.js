@@ -4,7 +4,7 @@ const controller = require('./controller')
 
 router.get("/", controller.getStudents);
 router.get("/:id", controller.getStudentsById);
-router.post("/", controller.createUser);
+router.post("/submit", controller.createUser);
 router.put("/:id",controller.updateUser)
 
 module.exports = router;

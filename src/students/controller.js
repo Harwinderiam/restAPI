@@ -33,9 +33,9 @@ const addStudent = (req,res) => {
     })
 }
 const createUser = (request, response) => {
-    const { name, email } = request.body
+    const { name, email,age,dob } = request.body
   
-    pool.query('INSERT INTO students (name, email) VALUES ($1, $2) RETURNING *', [name, email], (error, results) => {
+    pool.query('INSERT INTO students (name, email,age,dob) VALUES ($1, $2,$3,$4) RETURNING *', [name, email], (error, results) => {
       if (error) {
         throw error
       }
